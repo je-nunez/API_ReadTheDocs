@@ -1,10 +1,10 @@
 # Description
 
-Gives in ReadTheDocs.org the EPUB, PDF, and HTML-ZIP links to documentation of
+Gives the EPUB, HTML-ZIP and PDF direct links to download the documentation of
 a project hosted by ReadTheDocs.org, so the documentation in any format can be
 downloaded from ReadTheDocs.org.
 
-It uses the ReadTheDocs.org's API, explained at
+It uses the useful ReadTheDocs.org's API, explained at
 [http://read-the-docs.readthedocs.org/en/latest/api.html](http://read-the-docs.readthedocs.org/en/latest/api.html)
 
 # WIP
@@ -14,15 +14,15 @@ subject to change. The documentation can be inaccurate.
 
 # Usage and Example
 
-To obtain the download links of the documentation of a project hosted by
-ReadTheDocs.org whose name is `https://<the-project-name>.ReadTheDocs.org/`,
-use
+To obtain the EPUB, HTML-Zip and PDF download links to the documentation of a
+project hosted by ReadTheDocs.org whose name is
+`https://<the-project-name>.ReadTheDocs.org/`, use:
 
      ./api_readthedocs.py  '<the-project-name>'  [...<other-project-names>...]
 
-For example, to obtain the download links of the documentation of the projects
-hosted by ReadTheDocs.org `scipy-cookbook`, `numpy`, `theanets`, and
-`python-aspectlib`, use:
+For example, to obtain the EPUB, HTML-Zip and PDF download links of the
+documentation of the projects hosted by ReadTheDocs.org `scipy-cookbook`,
+`numpy`, `theanets`, and `python-aspectlib`, use:
 
      ./api_readthedocs.py scipy-cookbook numpy theanets python-aspectlib
 
@@ -62,8 +62,9 @@ redirects
 
 to the EPUB file with the documentation of `scipy-cookbook`.
 
-Not all projects have their documentations available to be download in all the three formats, EPUB, PDF
-and HTML-Zip.
+**Note**: Not all projects have their documentations available to be downloaded in
+all the three formats, EPUB, PDF and HTML-Zip. This is owner-configurable per project
+and per export-format in the hosting provided by ReadTheDocs.org.
 
 Note that besides the download links, like:
 
@@ -71,9 +72,10 @@ Note that besides the download links, like:
 
      theanets: epub: https://readthedocs.org/projects/theanets/downloads/epub/stable/
 
-it will also give the Project, Code Repository, and Time of Last Modification of the documentation. If
-these comments want to be omitted in the output, simply call the program with the argument `--no-comments`,
-and it will give merely the links to download the documentation in the EPUB, PDF, and/or HTML-Zip formats.
+it will also give the Project, Code Repository, and Time of Last Modification of the
+documentation. If you want to omit these comments in the output, simply call the
+program with the argument `--no-comments`, and it will give merely the links to
+download the documentation in the EPUB, PDF, and/or HTML-Zip formats.
 
 # Requeriments:
 
