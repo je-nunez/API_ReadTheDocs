@@ -64,7 +64,12 @@ to the EPUB file with the documentation of `scipy-cookbook`.
 
 **Note**: Not all projects have their documentations available to be downloaded in
 all the three formats, EPUB, PDF and HTML-Zip. This is owner-configurable per project
-and per export-format in the hosting provided by ReadTheDocs.org.
+and per export-format in the hosting provided by ReadTheDocs.org. (Old projects, like
+`scipy-cookbook`, neither have the attribute to indicate if the documentation is
+available in that format, so what this program does is to do `HEAD` HTTP request to
+the links returned, to ensure these links does exist. It could also have done a
+`GET` HTTP request, but this would have implied to download directly that EPUB, PDF
+and/or HTML-Zip, if available, using more network bandwith and running more slowly.)
 
 Note that besides the download links, like:
 
