@@ -19,10 +19,9 @@ def main():
     summary_usage = 'Retrieves download links to EPUB, HtmlZip, and PDF ' \
                     'documents of a project in ReadTheDocs.org.'
 
-    parser = argparse.ArgumentParser(description=summary_usage,
-                                     epilog=detailed_usage,
-                                     formatter_class=
-                                     RawDescriptionHelpFormatter)
+    parser = argparse.ArgumentParser(
+        description=summary_usage, epilog=detailed_usage,
+        formatter_class=RawDescriptionHelpFormatter)
 
     parser.add_argument('-n', '--no-comments', required=False,
                         dest='no_comments', action='store_true',
