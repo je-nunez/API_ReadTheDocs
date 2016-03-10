@@ -82,14 +82,39 @@ documentation. If you want to omit these comments in the output, simply call the
 program with the argument `--no-comments`, and it will give merely the links to
 download the documentation in the EPUB, PDF, and/or HTML-Zip formats.
 
+# List of all ReadTheDocs.org's hosted documentation
+
+There is a second program in this repository, `ls_all_projects_rtd.py`, which will contact
+ReadTheDocs.org's API and will return the list of all the documentation hosted in this site,
+including all attributes as above (time of last update of the documentation, source code
+repositories, etc) and others, like initial publication date of the documentation, etc.
+
+This program is useful because it gives a quick browse which can reveal very interesting
+projects which have documentation in ReadTheDocs.org and can be interesting to see its
+functionality or implementation, like, to name just a few of the more than 28'000 projects
+whose documentation is hosted there:
+
+     geco-statistics  (a Python 2.6+ module to analyze results from LIGO interferometers,
+                       of gravitational waves' fame. Details are in the documentation)
+
+     platformio  (programming for the Internet of Things)
+
+     gpiozero
+
+     a-little-book-of-r-for-biomedical-statistics
+
+     a-little-book-of-r-for-bayesian-statistics
+
+     scikit-neuralnetwork
+
+     raspberry-pi-guide
+
+     auto-sklearn
+
 # Requeriments:
 
 The [slumber](https://pypi.python.org/pypi/slumber) and [requests](https://pypi.python.org/pypi/requests)
 Python libraries.
-
-# List of all ReadTheDocs.org's hosted documentation
-
-To see the list of all ReadTheDoc's hosted documentation, visit [https://readthedocs.org/projects/](https://readthedocs.org/projects/)
 
 # Other
 
