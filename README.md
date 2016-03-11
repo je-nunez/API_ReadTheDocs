@@ -62,6 +62,23 @@ redirects
 
 to the EPUB file with the documentation of `scipy-cookbook`.
 
+To download the documentation as pdf from ReadTheDocs, run:
+
+     ./api_readthedocs.py  -s pdf  [-d <destination-dir>]  <the-project-name>  [...<other-project-names>...]
+
+The downloaded pdf is saved with the same filename as the project name in ReadTheDocs.org.
+
+To download the documentation as epub, run:
+
+     ./api_readthedocs.py  -s epub  [-d <destination-dir>]  <the-project-name>  [...<other-project-names>...]
+
+Similarly, the following:
+
+     ./api_readthedocs.py  -s zip  [-d <destination-dir>]  <the-project-name>  [...<other-project-names>...]
+
+will download the documentation as an HTML-zip archive. If `[-d <destination-dir>]`
+is not given, then the current directory is assumed.
+
 **Note**: Not all projects have their documentations available to be downloaded in
 all the three formats, EPUB, PDF and HTML-Zip. This is owner-configurable per project
 and per export-format in the hosting provided by ReadTheDocs.org. (Old projects, like
