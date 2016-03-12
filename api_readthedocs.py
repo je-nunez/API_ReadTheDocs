@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 """Show the download links to EPUB, HtmlZip, and PDF files of the
-documentation of project hosted in ReadTheDocs.org."""
+documentation of project hosted in ReadTheDocs.org, and optionally,
+download the documentation as a document in one of these formats."""
 
 from __future__ import print_function
 import requests
@@ -16,17 +17,22 @@ def main():
 
     detailed_usage = get_this_script_docstring()
 
-    summary_usage = 'Retrieves download links to EPUB, HtmlZip, and PDF ' \
-                    'documents of a project in ReadTheDocs.org.'
+    summary_usage = 'List the EPUB, HtmlZip, and PDF download links to ' \
+                    'the documentation of a project in ReadTheDocs.org, ' \
+                    'and optionally, downloads one of these links.'
 
     parser = argparse.ArgumentParser(
         description=summary_usage, epilog=detailed_usage,
         formatter_class=RawDescriptionHelpFormatter)
 
+    # ReadTheDocs.org allows to download the documentation in pdf, epub, zip
+    # (a hosted project could have one of the formats disabled though)
+    available_formats = ['pdf', 'epub', 'zip']
     parser.add_argument('-s', '--save-format', required=False, type=str,
-                        metavar='save_format',
-                        help='Save the documentation in the given format '
-                             '(default: "only show links, do not save")')
+                        metavar='save_format', choices=available_formats,
+                        help='Save the documentation in the given format: '
+                             'pdf, epub, or zip (default: "only show links, '
+                             'do not save")')
 
     parser.add_argument('-d', '--destination-dir', required=False, type=str,
                         metavar='destination_dir',
@@ -38,7 +44,7 @@ def main():
                         help='Do not print some of the header comments '
                              'related to the project in ReadTheDocs.org, '
                              'just print the URLs to download the documents.'
-                             ' (default: "comments shown")')
+                             ' (default: "comments are shown")')
     parser.set_defaults(no_comments=False)
 
     parser.add_argument('slugs', nargs='+',
