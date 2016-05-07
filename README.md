@@ -1,8 +1,7 @@
 # Description
 
-Gives the EPUB, HTML-ZIP and PDF direct links to download the documentation of
-a project hosted by ReadTheDocs.org, so the documentation in any format can be
-downloaded from ReadTheDocs.org.
+Downloads to the local computer or show the EPUB, HTML-ZIP and PDF direct
+links to the documentation of a project hosted by ReadTheDocs.org.
 
 It uses the useful ReadTheDocs.org's API, explained at
 [http://read-the-docs.readthedocs.org/en/latest/api.html](http://read-the-docs.readthedocs.org/en/latest/api.html)
@@ -13,6 +12,11 @@ This project is a *work in progress*. The implementation is *incomplete* and
 subject to change. The documentation can be inaccurate.
 
 # Usage and Example
+
+Further below there is an example on how to download the documentation in
+EPUB, PDF, or HTML-Zip, of a project in ReadTheDocs.org, using the
+`-s <format>` option. (If the author of the documentation made the requested
+format available for download.)
 
 To obtain the EPUB, HTML-Zip and PDF download links to the documentation of a
 project hosted by ReadTheDocs.org whose name is
