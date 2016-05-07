@@ -1,6 +1,6 @@
 # Description
 
-Downloads to the local computer or show the EPUB, HTML-ZIP and PDF direct
+Downloads to the local computer or shows the EPUB, HTML-ZIP and PDF direct
 links to the documentation of a project hosted by ReadTheDocs.org.
 
 It uses the useful ReadTheDocs.org's API, explained at
